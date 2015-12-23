@@ -22,10 +22,10 @@ import sphinx_rtd_theme
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
-def setup(sphinx):
-    sys.path.insert(0, os.path.abspath('./utils'))
-    from SolidityLexer import SolidityLexer
-    sphinx.add_lexer('Solidity', SolidityLexer())
+# def setup(sphinx):
+#    sys.path.insert(0, os.path.abspath('./utils'))
+#    from SolidityLexer import SolidityLexer
+#    sphinx.add_lexer('Solidity', SolidityLexer())
 
 # -- General configuration ------------------------------------------------
 
@@ -102,7 +102,7 @@ exclude_patterns = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
-highlight_language = 'Solidity'
+highlight_language = 'JavaScript'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []

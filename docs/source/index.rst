@@ -1,8 +1,10 @@
-idrevo docs
-===========
+idrevo
+======
+Identity | Reputation | Voting
+*Congress on the Blockchain*
 
 Another header
-==============
+--------------
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -60,13 +62,28 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ::
 	    }
 	}
 
-Small header
-^^^^^^^^^^^^
+
+Useful links
+------------
+
+* `Ethereum <https://ethereum.org>`_
+
+* `Browser-Based Compiler <https://chriseth.github.io/browser-solidity/>`_
+
+* `Changelog <https://github.com/ethereum/wiki/wiki/Solidity-Changelog>`_
+
+* `Story Backlog <https://www.pivotaltracker.com/n/projects/1189488>`_
+
+* `Source Code <https://github.com/ethereum/solidity/>`_
+
+* `Gitter Chat <https://gitter.im/ethereum/solidity/>`_
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :caption: Contents
 
-   license
+   technical-proposal.rst
+   cost-proposal.rst
 
 
 Indices and tables
