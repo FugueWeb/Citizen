@@ -1,2 +1,2 @@
-# idrevo
-Identity, reputation, and voting
+# Citizen
+Congress on the Blockchain
