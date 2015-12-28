@@ -4,83 +4,40 @@ Citizen
 
 *Congress on the Blockchain*
 
-Another header
---------------
+SBIR TOPIC NUMBER: H‐SB016.1‐002
+================================
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+TITLE: Applicability of Blockchain Technology to Privacy Respecting Identity Management
 
-::
+TECHNOLOGY AREAS: Identity, Privacy, and Cybersecurity
 
-	contract Crowdsale {
+OBJECTIVE: Design information security and privacy concepts on the blockchain to support identity management capabilities that increase security and productivity while decreasing costs and security risks for the Homeland Security Enterprise (HSE).
 
-	    address public beneficiary;
-	    uint public fundingGoal; uint public amountRaised; uint public deadline; uint public price;
-	    token public tokenReward;
-	    Funder[] public funders;
-	    event FundTransfer(address backer, uint amount, bool isContribution);
+DESCRIPTION: Blockchain technologies, if incorporated with the security and privacy capabilities required by the HSE, potentially offer a flexible, resilient and potentially lower cost alternative to current Homeland Security Enterprise identity management capabilities.
+Current HSE identity management deployments utilize centralized authoritative sources to vouch for the accuracy of the information they collect and maintain. While mechanisms for storing this information can vary (Lightweight Directory Access Protocol (LDAP), databases, Active Directory, etc.), they are ultimately a type of organizationally owned and controlled ledger.
 
-	    /* data structure to hold information about campaign contributors */
-	    struct Funder {
-	        address addr;
-	        uint amount;
-	    }
+This in turn has led to an ecosystem where processing a transaction to validate information (e.g., birth date) it is necessary to (1) first discover the entity that is considered authoritative for that information, (2) establish the technical means (protocols, data formats, etc.) to interact with that entity, and (3) rely upon the ability and scalability of that entity to validate the information.
 
-	    /*  at initialization, setup the owner */
-	    function Crowdsale(address _beneficiary, uint _fundingGoal, uint _duration, uint _price, token _reward) {
-	        beneficiary = _beneficiary;
-	        fundingGoal = _fundingGoal;
-	        deadline = now + _duration * 1 minutes;
-	        price = _price;
-	        tokenReward = token(_reward);
-	    }
+Potential examples of this type of interaction within the Homeland Security Enterprise (HSE) are validation of employment status, citizenship, eligibility to work, validation of qualifications of first responders and any other type of interaction that requires a central authority to provide a distributed validation capability.
 
-	    /* The function without name is the default function that is called whenever anyone sends funds to a contract */
-	    function () {
-	        uint amount = msg.value;
-	        funders[funders.length++] = Funder({addr: msg.sender, amount: amount});
-	        amountRaised += amount;
-	        tokenReward.sendCoin(msg.sender, amount / price);
-	        FundTransfer(msg.sender, amount, true);
-	    }
+However, recent innovations around crypto‐currencies point to a potential answer to this dilemma. Of particular interest is the underlying technology of the ‘bitcoin’ crypto‐currency, which is called the blockchain. The blockchain is in effect a common, public ledger, which utilizes cryptographic mechanisms to verify transactions and information in a decentralized manner.
+The potential applicability of blockchain technology goes beyond crypto‐currencies (which is simply an application built on top of that technology) to many other uses such as smart contracts, provenance and attribution, distributed validation of information and more.
 
-	    modifier afterDeadline() { if (now >= deadline) _ }
+This SBIR topic is focused on determining and demonstrating if classic information security concepts such as confidentiality, integrity, availability, non‐repudiation and provenance as well as privacy concepts such as pseudonymity and selective disclosure of information can be built on top of the blockchain to provide a distributed, scalable approach to privacy respecting identity management.
 
-	    /* checks if the goal or time limit has been reached and ends the campaign */
-	    function checkGoalReached() afterDeadline {
-	        if (amountRaised >= fundingGoal){
-	            beneficiary.send(amountRaised);
-	            FundTransfer(beneficiary, amountRaised, false);
-	        } else {
-	            FundTransfer(0, 11, false);
-	            for (uint i = 0; i < funders.length; ++i) {
-	              funders[i].addr.send(funders[i].amount);
-	              FundTransfer(funders[i].addr, funders[i].amount, false);
-	            }
-	        }
-	        suicide(beneficiary);
-	    }
-	}
+PHASE I: Analyze the current implementation of the public blockchain technology and develop the concepts and methods needed to demonstrate the implementation of information security principles of confidentiality, integrity, availability, non‐repudiation and provenance as well as privacy concepts such as pseudonymity and selective disclosure of information on the public blockchain.
+
+This phase will demonstrate the various information security and privacy concepts and methods using a multi‐user information‐sharing prototype and provide detailed architecture and technical details that document and explain the implementation. In addition, this phase will explore, analyze and document the feasibility of applying the developed concepts and methods to a private or consortium based blockchain.
+
+Potential HSE Applications of this technology include attribute registries used to share emergency responder qualifications, employment eligibility or organizational affiliations as a precursor to physical and logical access control. (Phase III)
 
 
 Useful links
 ------------
 
-* `Ethereum <https://ethereum.org>`_
+* `Citizen GitHub Repository <https://github.com/FugueWeb/Citizen>`_
 
-* `Browser-Based Compiler <https://chriseth.github.io/browser-solidity/>`_
-
-* `Changelog <https://github.com/ethereum/wiki/wiki/Solidity-Changelog>`_
-
-* `Story Backlog <https://www.pivotaltracker.com/n/projects/1189488>`_
-
-* `Source Code <https://github.com/ethereum/solidity/>`_
-
-* `Gitter Chat <https://gitter.im/ethereum/solidity/>`_
+* `Citizen Documentation <http://citizen.readthedocs.org/en/latest/index.html>`_
 
 .. toctree::
    :maxdepth: 3
@@ -88,7 +45,9 @@ Useful links
 
    technical-proposal.rst
    cost-proposal.rst
-
+   briefing-chart.rst
+   eligibility.rst
+   appendix.rst
 
 Indices and tables
 ==================
