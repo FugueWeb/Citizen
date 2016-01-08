@@ -10,9 +10,3 @@ Modern Educational Governance
    opinion.rst
    discussion.rst
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
-
