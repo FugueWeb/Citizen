@@ -54,8 +54,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Citizen'
-copyright = u'2015, Fugue Web'
+project = u'Modern Education Governance'
+copyright = u'2015, David Houston'
 author = u'David Houston'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -235,7 +235,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'Citizen.tex', u'Citizen Documentation',
+  (master_doc, 'Citizen.tex', u'Modern Educational Governance',
    u'David Houston', 'manual'),
 ]
 
@@ -265,7 +265,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'Citizen', u'Citizen Documentation',
+    (master_doc, 'Citizen', u'Modern Educational Governance',
      [author], 1)
 ]
 
@@ -279,7 +279,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'Citizen', u'Citizen Documentation',
+  (master_doc, 'Citizen', u'Modern Educational Governance',
    author, 'Citizen', 'One line description of project.',
    'Miscellaneous'),
 ]

@@ -1,17 +1,14 @@
-#######
-Citizen
-#######
+#############################
+Modern Educational Governance
+#############################
 
 .. toctree::
    :maxdepth: 3
    :caption: Contents
 
-   introduction.rst
-   technical-proposal.rst
-   cost-proposal.rst
-   briefing-chart.rst
-   eligibility.rst
-   appendix.rst
+   summary.rst
+   opinion.rst
+   discussion.rst
 
 Indices and tables
 ==================
